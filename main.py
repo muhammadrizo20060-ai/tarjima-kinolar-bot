@@ -2,7 +2,7 @@ import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-# Kinolar bazasi - Siz yuborgan yangi ID bilan
+# Kinolar bazasi - Vergullarga e'tibor bering!
 movies = {
     "1": ["Mening aybim (2023)", "BAACAgQAAxkBAANAaet2sY5LSEy-9DlGTIC5o51JSyUAAqoQAAL64MlTtWhK3fzIdRU7BA"],
     "2": ["Sening aybing (2024)", "BAACAgQAAxkBAANCaet2t8_T4fj4YZhh-IWbQQ9Pqh8AAnEYAALNDqFQSXXFhcqD2ks7BA"],
@@ -10,13 +10,23 @@ movies = {
     "100": ["O'zaro qizlar orasida", "BAACAgEAAxkBAAMVaetLZu51DnkuL-rCwMXToK2zrG4AAv4LAAIyYZlGUwRpc0DEBFc7BA"],
     "101": ["Kickboxer", "BAACAgIAAxkBAAM5aety54oze2DLgHHubjCt1ZyNlrEAAtacaALj2GFJQfQUnnOMvCo7BA"]
 }
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Assalomu alaykum! Kino kodini yuboring.")
+    await update.message.reply_text(f"Assalomu alaykum! @{context.bot.username} botiga xush kelibsiz.\nKino kodini yuboring.")
 
 async def get_movie(update: Update, context: ContextTypes.DEFAULT_TYPE):
     code = update.message.text
     if code in movies:
-        await update.message.reply_video(video=movies[code], caption=f"Kino kodi: {code}")
+        name = movies[code][0]  # Kino nomi
+        file_id = movies[code][1] # Video ID
+        
+        caption_text = (
+            f"🎬 Kino nomi: {name}\n\n"
+            f"🤖 Botimiz: @{context.bot.username}\n"
+            f"🔑 Kod: {code}"
+        )
+        # Video yuborish qismi (file_id ishlatiladi)
+        await update.message.reply_video(video=file_id, caption=caption_text)
     else:
         await update.message.reply_text("Xato kod! Bunday kino topilmadi.")
 
