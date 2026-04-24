@@ -1,7 +1,26 @@
 import logging
 import os
+from threading import Thread
+from flask import Flask
 from aiogram import Bot, Dispatcher, types
 from aiogram.utils import executor
+
+# --- KEEP-ALIVE WEB SERVER ---
+app = Flask(__name__)
+
+
+@app.route('/')
+def home():
+    return "Bot is running!"
+
+
+def run_web():
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8000)))
+
+
+def keep_alive():
+    t = Thread(target=run_web, daemon=True)
+    t.start()
 
 # --- SOZLAMALAR ---
 API_TOKEN = os.environ['BOT_TOKEN']
@@ -57,4 +76,5 @@ async def check_code(message: types.Message):
 
 
 if __name__ == '__main__':
+    keep_alive()
     executor.start_polling(dp, skip_updates=True)
