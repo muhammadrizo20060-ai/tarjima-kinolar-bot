@@ -33,6 +33,7 @@ dp = Dispatcher(bot)
 # --- KINO BAZASI ---
 # O'zingiz xohlagan kodlarni shu yerga qo'shib borasiz
 movies = {
+    "1": "BAACAgQAAxkBAANAaet2sY5LSEy-9DlGTIC5o51JSyUAAqoQAAL64MlTtWhK3fzIdRU7BA",
     "100": "BAACAgEAAxkBAAMVaetLZu51DnkuL-rCwMXToK2zrG4AAv4LAAIyYZlGUwRpc0DEBFc7BA",
     "101": "BAACAgIAAxkBAAM5aety54oze2DLgHHUbjCt1ZyNlrEAAtaCAALj2GFJQfQUnnOMvCo7BA",
 }
