@@ -6,7 +6,14 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 movies = {
     "100": "BAACAgEAAxkBAAMVaetLZu51DnkuL-rCwMXToK2zrG4AAv4LAAIyYZlGUwRpc0DEBFc7BA",
 }
-
+{" 3" : "BAACAgIAAxkBAAM9aet2bV9oT5unRHk3KDohDAABl-xhAAIGgwACLfChSzI6-b2gd2p8OwQ" ,
+}
+{"1" : "BAACAgQAAxkBAANAaet2sY5LSEy-9DlGTIC5o51JSyUAAqoQAAL64MlTtWhK3fzIdRU7BA" , 
+}
+{"2" : " BAACAgQAAxkBAANCaet2t8_T4fj4YZhh-IWbQQ9Pqh8AAnEYAALNDqFQSXXFhcqD2ks7BA" , 
+}
+{"101" : "BAACAgIAAxkBAAM5aety54oze2DLgHHUbjCt1ZyNlrEAAtaCAALj2GFJQfQUnnOMvCo7BA" ,
+}
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Assalomu alaykum! Kino kodini yuboring.")
 
