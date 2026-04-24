@@ -8,7 +8,7 @@ movies = {
     "2": ["Sening aybing (2024)", "BAACAgQAAxkBAANCaet2t8_T4fj4YZhh-IWbQQ9Pqh8AAnEYAALNDqFQSXXFhcqD2ks7BA"],
     "3": ["Bizning aybimiz (2025)", "BAACAgIAAxkBAAM9aet2bV9oT5unRHk3KDohDAABl-xhAAIGgwACLfChSzI6-b2gd2p8OwQ"],
     "100": ["O'zaro qizlar orasida", "BAACAgEAAxkBAAMVaetLZu51DnkuL-rCwMXToK2zrG4AAv4LAAIyYZlGUwRpc0DEBFc7BA"],
-    "101": ["Kickboxer", "BAACAgIAAxkBAAM5aety54oze2DLgHHubjCt1ZyNlrEAAtacaALj2GFJQfQUnnOMvCo7BA"],
+    "101": ["Kickboxer", "BAACAgIAAxkBAAM5aety54oze2DLgHHubjCt1ZyNlrEAAtacaALj2GFJQfQUnnOMvCo7BA"]
 }
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Assalomu alaykum! Kino kodini yuboring.")
