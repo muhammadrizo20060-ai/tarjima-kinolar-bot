@@ -14,7 +14,7 @@ dp = Dispatcher(bot)
 # --- KINO BAZASI ---
 # O'zingiz xohlagan kodlarni shu yerga qo'shib borasiz
 movies = {
-    "100": "BAACAgIAAxkBAAEY...",  # Namuna: 100-kodli kino
+    "100": "BAACAgEAAxkBAAMVaetLZu51DnkuL-rCwMXToK2zrG4AAv4LAAIyYZlGUwRpc0DEBFc7BA",
 }
 
 
