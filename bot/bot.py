@@ -22,7 +22,7 @@ movies = {
 async def start(message: types.Message):
     await message.answer(
         f"Assalomu alaykum, {message.from_user.first_name}!\n\n"
-        "🎬 **Tarjima kinolar 12** botiga xush kelibsiz.\n"
+        "🎬 **@tarjima_kinolar13_bot** botiga xush kelibsiz.\n"
         "Kino ko'rish uchun uning kodini yozib yuboring.\n\n"
         "👤 Admin: @mahmudovvx"
     )
@@ -50,7 +50,7 @@ async def check_code(message: types.Message):
     if code in movies:
         await message.answer_video(
             video=movies[code],
-            caption=f"✅ Kino kodi: {code}\n🍿 Yoqimli tomosha!\n\nBot: @Tarjimakinolar12bot"
+            caption=f"✅ Kino kodi: {code}\n🍿 Yoqimli tomosha!\n\nBot: @tarjima_kinolar13_bot"
         )
     else:
         await message.answer("❌ Kechirasiz, bunday kodli kino hali bazada yo'q.")
