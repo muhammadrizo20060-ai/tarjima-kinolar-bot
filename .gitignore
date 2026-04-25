@@ -41,6 +41,9 @@ testem.log
 .DS_Store
 Thumbs.db
 
+# SQLite database (bot data)
+*.db
+
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md
 
